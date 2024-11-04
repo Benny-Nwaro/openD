@@ -1,33 +1,17 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
-import homeImage from "../assets/home-img.png";
 import { BrowserRouter, Link,  Route, Routes } from "react-router-dom";
 import Minter from "./Minter";
 import Gallery from "./Gallery";
 import Home from "./Home";
+import Details from "./UserGallery";
+
+
 
 
 function Header() {
   const [userOwnedGallery, setOwnedGallery] = useState();
-  const [listingGallery, setListingGallery] = useState();
 
-  // async function getNFTs() {
-  //   const userNFTIds = await opend.getOwnedNFTs(CURRENT_USER_ID);
-  //   console.log(userNFTIds);
-  //   setOwnedGallery(
-  //     <Gallery title="My NFTs" ids={userNFTIds} role="collection" />
-  //   );
-
-  //   const listedNFTIds = await opend.getListedNFTs();
-  //   console.log(listedNFTIds);
-  //   setListingGallery(
-  //     <Gallery title="Discover" ids={listedNFTIds} role="discover" />
-  //   );
-  // }
-
-  // useEffect(() => {
-  //   getNFTs();
-  // }, []);
 
   return (
     <BrowserRouter forceRefresh={true}>
@@ -38,7 +22,7 @@ function Header() {
             <img className="header-logo-11" src={logo} />
             <div className="header-vertical-9"></div>
             <Link to="/">
-              <h5 className="Typography-root header-logo-text">OpenD</h5>
+              <h5 className="Typography-root header-logo-text">vendApp</h5>
             </Link>
             <div className="header-empty-6"></div>
             <div className="header-space-8"></div>
@@ -46,19 +30,19 @@ function Header() {
               <Link to="/discover">Discover</Link>
             </button>
             <button className="ButtonBase-root Button-root Button-text header-navButtons-3">
-              <Link to="/minter">Minter</Link>
+              <Link to="/minter">Upload</Link>
             </button>
             <button className="ButtonBase-root Button-root Button-text header-navButtons-3">
-              <Link to="/collection">My NFTs</Link>
+              <Link to="/collection">My movies</Link>
             </button>
           </div>
         </header>
       </div>
       <Routes>
         <Route exact path="/" Component={Home}/>
-        <Route path="/discover" Component={listingGallery}/>
+        <Route path="/discover" Component={Gallery}/>
         <Route path="/minter" Component={Minter} />
-        <Route path="/collection" Component={userOwnedGallery}/>
+        <Route path="/collection" Component={Details}/>
       </Routes>
     </BrowserRouter>
   );
