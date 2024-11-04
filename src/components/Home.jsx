@@ -1,10 +1,10 @@
 import React from 'react'
-import homeImage from "../assets/home-img.png";
+import background from "../assets/background.png";
 
 
 export default function Home() {
   return (
-    <img className="bottom-space" src={homeImage} />
+    <img className="bottom-space" src={background} />
 
   )
 }

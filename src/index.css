@@ -1261,8 +1261,7 @@ label[data-shrink="false"]
 
 .gallery-view {
   margin-bottom: 30px;
-  width: 50vw;
-  margin-left: 25vw;
+  width: 100%;
 }
 
 .horizontal-center {

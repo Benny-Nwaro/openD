@@ -1128,18 +1128,17 @@ label[data-shrink="false"]
 }
 .disGrid-item {
   display: inline;
-  margin: 0;
   box-sizing: border-box;
 }
 .disGrid-justify-content-xs-center {
   justify-content: center;
 }
 .disGrid-spacing-xs-2 {
-  width: calc(100% + 16px);
-  margin: -8px;
+  width: 100%;
+  /* margin: -8px; */
 }
 .disGrid-spacing-xs-2 > .disGrid-item {
-  padding: 8px;
+  padding: 0px;
 }
 .disGrid-spacing-xs-5 {
   width: calc(100% + 40px);
@@ -1261,8 +1260,10 @@ label[data-shrink="false"]
 
 .gallery-view {
   margin-bottom: 30px;
-  width: 50vw;
-  margin-left: 25vw;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
 }
 
 .horizontal-center {
