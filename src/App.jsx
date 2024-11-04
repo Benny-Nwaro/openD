@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import "./assets/main.css";
 import Header from "./components/Header";
 import axios from "axios";
+import { getServer } from "./util";
+getServer
 
 
 
@@ -14,7 +16,7 @@ function App() {
       const fetchData = async()=>{
         if(location.includes("=")){
           const id = location.split("=")[1]
-        const res = await axios.get(`http://localhost:5000/login/${id}`)
+        const res = await axios.get(`${getServer()}/login/${id}`)
         const user = res.data.userDetails
         localStorage.setItem("userDetail", JSON.stringify(user))
         }  

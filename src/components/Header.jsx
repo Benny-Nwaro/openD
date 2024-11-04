@@ -10,8 +10,6 @@ import Details from "./UserGallery";
 
 
 function Header() {
-  const [userOwnedGallery, setOwnedGallery] = useState();
-
 
   return (
     <BrowserRouter forceRefresh={true}>
