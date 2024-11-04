@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios"
+import { getServer } from "../util";
+
 
 function Minter() {
   const [loaderHidden, setLoaderHidden] = useState(false);
@@ -30,7 +32,7 @@ function Minter() {
     formData.append("category", inputs.category);
     formData.append("price", inputs.price);
     formData.append("userId", id);
-    const response = await axios.post('http://localhost:5000/upload', formData, {
+    const response = await axios.post(`${getServer()}/movies`, formData, {
       headers: {
           'Content-Type': 'multipart/form-data',
       },
