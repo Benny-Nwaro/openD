@@ -13,6 +13,13 @@ function Item(props) {
       <div className="disPaper-root disCard-root makeStyles-root-17 disPaper-elevation1 disPaper-rounded" style={{width:"500px"}}>
       <video  style={{width:"500px",  objectFit:"cover", controls:"disabled"}}  controls={props.control} width="100%">
       <source src={props.url} type="video/mp4" />
+      <source src={props.url} type="video/webm"/>       
+      <source src={props.url} type="video/ogg"/>         
+      <source src={props.url} type="video/quicktime"/>   
+      <source src={props.url} type="video/x-msvideo"/>   
+      <source src={props.url} type="video/x-ms-wmv"/>    
+      <source src={props.url} type="video/x-matroska"/>
+      
       Sorry, your browser doesn't support embedded videos.
     </video>   
         <div className="disCardContent-root">
